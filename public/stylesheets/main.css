@@ -1,0 +1,69 @@
+body{
+    background: black;
+}
+.thumbnail img{
+    width:100%;
+}
+.thumbnail{
+    padding:0;
+    background: black;
+    border-color: #2c2f33;
+    font-family: 'Abel', sans-serif;
+}
+.thumbnail .caption-full{
+    padding:9px;
+    color: white;
+    font-family: 'Abel', sans-serif;
+}
+#delete-form{
+    display: inline;
+   
+}
+#delete-btn{
+    display: inline;
+   
+}
+
+.jumbotron{
+    background:url(https://static.tumblr.com/1733c01efc50dd886f705a7da8dfc73c/n07xx5p/KXgp39qnn/tumblr_static_c8o4mjgdg1cs0sk08w80s88ss.jpg);
+    color: white;
+    width: 100%;
+
+
+}
+.caption h4{
+    color: white;
+    font-family: 'Abel', sans-serif;
+}
+.well{
+    background: black;
+    color: white;
+    font-family: 'Abel', sans-serif;
+}
+.lead{
+    color: white;
+    font-family: 'Abel', sans-serif;
+}
+#name{
+    color:white;
+    font-family: 'Abel', sans-serif;
+}
+#title{
+    color: white;
+    font-family: 'Abel', sans-serif;
+}
+.footer{
+    color: white;
+    background-color: #171717;
+    height: 7%;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    position: fixed;
+    font-family: 'Abel', sans-serif;
+    font-size: 15px;
+    letter-spacing: 1px;
+    
+  
+
+}

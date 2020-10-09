@@ -1,0 +1,52 @@
+<%- include("../partials/header") %>
+    <% if (currentUser && currentUser.isAdmin){ %>
+        <h1>You have Admin Control </h1>
+
+    <%}%>
+
+
+
+<header class="jumbotron text-white">
+    <div class="container">
+    <h1>Welcome to Onside</h1>
+    <p>One stop destination for all the football fans out there</p>
+    <P>
+        <a class="btn btn-primary btn-lg" href="/campgrounds/new">Add Post</a>
+
+    </P>
+    <p>
+        <form  action="/campgrounds" method="GET" class="form-inline">
+            <div>
+                <input type="text" name="search" placeholder="Type to search..." class="form-control">
+                <input type="submit" value="Search" class="btn btn-default">
+            </div>
+        </form>
+    </p>
+    
+    </div>
+
+</header>
+
+        <div class="row text-center" style="display: flex; flex-wrap: wrap;">
+        
+
+            <% campgrounds.forEach(function(campground){ %>
+                <div class="col-md-6 col-sm-12">
+                    <div class="thumbnail">
+                        <img src= "<%= campground.image %>" >
+                        <div class="caption"> 
+                            <h4><%= campground.name %></h4>
+                        </div>
+                        <p>
+                            <a href="/campgrounds/<%= campground._id %>" class="btn btn-primary"> More Info</a>
+                        </p>
+                    </div>
+                   
+                   
+                </div>
+<% }); %>
+        </div>
+
+ 
+
+<%- include("../partials/footer") %>

@@ -55,15 +55,17 @@ body{
 .footer{
     color: white;
     background-color: #171717;
-    height: 7%;
+    height: 20%;
     left: 0;
     bottom: 0;
     width: 100%;
-    position: fixed;
     font-family: 'Abel', sans-serif;
     font-size: 15px;
     letter-spacing: 1px;
     
   
 
+}
+h1{
+    color: white;
 }

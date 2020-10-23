@@ -1,5 +1,8 @@
 body {
-    background-color: #000;
+    
+    background-image: url(https://90l.tribuna.com/images/41/0b/77/410b770a2fb543a9afb48e03e43b5e851200x630.jpg);
+    background-size: cover;
+  
   }
 
   #landing-header {
@@ -9,14 +12,16 @@ body {
     padding-top: 40vh;
   }
   
-  #landing-header h1 {
+#landing-header h1 {
     color: white;
     font-size: 100px;
     text-decoration: black;
+    font-family: 'Abel', sans-serif;
+    text-shadow: 2px 2px 5px black;
     
-  }
+}
 
-  .slideshow { 
+  /* .slideshow { 
     position: fixed;
     width: 100%;
     height: 100%;
@@ -78,4 +83,4 @@ body {
   
 .no-cssanimations .slideshow li {
 	opacity: 1;
-}
+} */

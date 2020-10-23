@@ -69,3 +69,15 @@ body{
 h1{
     color: white;
 }
+.bottom{
+    position: fixed;
+    color: white;
+    background-color: #171717;
+    height: 10%;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    font-family: 'Abel', sans-serif;
+    font-size: 15px;
+    letter-spacing: 1px;
+}

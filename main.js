@@ -61,7 +61,7 @@ app.use(function(req,res, next ){
 
 
 mongoose.Promise=global.Promise;
-mongoose.connect("mongodb://localhost:27017/yelp_camp", {useNewUrlParser: true});
+mongoose.connect(dbUrl, {useNewUrlParser: true});
 
 app.use(bodyParser.urlencoded({extended:true}));
 

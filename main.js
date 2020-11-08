@@ -14,6 +14,9 @@ var commentRoutes=require("./routes/comments");
 var campgroundRoutes=require("./routes/campground");
 var authRoutes=require("./routes/index");
 var methodOverride=require("method-override")
+const session=require("express-session")
+const MongoStore = require('connect-mongo')(session);
+var dbUrl=process.env.DB_URL
 require('dotenv').config()
  
 app.use(methodOverride("_method"));
@@ -24,12 +27,21 @@ app.use(express.static(__dirname+"/public"))
 
 app.use(flash());
 
+var store= new MongoStore({
+    url:dbUrl,
+    secret:"merahogyahai",
+    touchAfter:24 * 60 * 60
+})
+
+store.on("error",function(e){
+    console.log("error is",e)
+})
 app.use(require("express-session")({
-    secret:"BRUHHHHHHHHHHHHHHHHHH",
+    store,
+    secret:"BRUHHHHHHHHHHHHHHHHH",
     resave:false,
     saveUninitialized:false
 }));
-
 app.locals.moment = require('moment');
 
 app.use(passport.initialize());
@@ -79,7 +91,7 @@ app.use("/campgrounds/:id/comments",commentRoutes);
 
 
 
-
-app.listen(3000,function(){
+var port= process.env.PORT || 3000;
+app.listen(port,function(){
     console.log("Server Started on Port 3000...");
 });
